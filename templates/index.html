@@ -3,20 +3,17 @@
 
 <!-- modify page title -->
 {% block title%}
-    <title>BFP - pharmacy</title>
-{%endblock%} 
+<title>BFP - home</title>
+{%endblock%}
 
-<!-- import sections -->
-{% include "landing.html" %}
-{% include "about.html" %}
-{% include "stats.html" %}
-{% include "services.html" %}
-{% include "appointments.html" %}
-{% include "team.html" %}
-{% include "faq.html" %}
-{% include "gallery.html" %}
-{% include "contact.html" %}
-{% include "footer.html" %}
+<!-- Start Nav Bar -->
+{% include "nav.html" %}
+<!-- End Nav Bar -->
 
-<hr class="orb-divider"></hr>
-<div class=""><h4>you've reached the end of this page</h4></div>
+<main class="main">
+    <!-- import sections -->
+    {% include "landing.html" %} {% include "about.html" %} {% include
+    "stats.html" %} {% include "services.html" %} {% include "appointments.html"
+    %} {% include "team.html" %} {% include "faq.html" %} {% include
+    "gallery.html" %} {% include "contact.html" %} {% include "footer.html" %}
+</main>
