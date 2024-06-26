@@ -60,7 +60,8 @@
 
     <body class="index-page">
         <!-- start insert content -->
-        {% block content %} {% endblock%}
+        {% block content %} 
+        {% endblock%}
         <!-- End insert content -->
 
         <!-- Scroll Top -->
@@ -70,9 +71,6 @@
             class="scroll-top d-flex align-items-center justify-content-center"
             ><i class="bi bi-arrow-up-short"></i
         ></a>
-
-        <!-- Preloader -->
-        <div id="preloader"></div>
 
         <!-- Vendor JS Files -->
         <script src="{{url_for('static', path='/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
