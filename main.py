@@ -1,12 +1,13 @@
 """Main FastAPI App."""
+
 from fastapi import FastAPI
-# from storage.database import engine
+from sql.database import engine
 from router import auth, shop, user, info
-# from storage.model import Base
+from sql.model import Base
 from config.config import get_settings
-# from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
+# from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI(
@@ -22,7 +23,7 @@ templates = Jinja2Templates(directory="templates")
 # CSS/JS Dependencies
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 #CORS middleware restrictions
 # origins = ["*"]
